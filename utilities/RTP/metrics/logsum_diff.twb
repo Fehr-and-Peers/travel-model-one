@@ -16,7 +16,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Travel Analysis Zones' name='ogrdirect.05bl4ka173i0ic18sqv051fhu4h6'>
-            <connection class='ogrdirect' directory='M:/Data/GIS layers/Travel_Analysis_Zones_(TAZ1454)' filename='Travel Analysis Zones.shp' ogr-grid-shift-folder='C:\Program Files\Tableau\Tableau 2018.3\local\proj4' password='' server='' tablename='' />
+            <connection class='ogrdirect' directory='M:/Data/GIS layers/Travel_Analysis_Zones_(TAZ4735)' filename='Travel Analysis Zones.shp' ogr-grid-shift-folder='C:\Program Files\Tableau\Tableau 2018.3\local\proj4' password='' server='' tablename='' />
           </named-connection>
           <named-connection caption='cs_both_CEM' name='textscan.1jzq1vr1m5gtos1ansnys1dgevsa'>
             <connection class='textscan' directory='' filename='cs_both_CEM.csv' password='' server='' />
@@ -25,14 +25,14 @@
         <relation join='right' type='join'>
           <clause type='join'>
             <expression op='='>
-              <expression op='[Travel Analysis Zones.shp].[TAZ1454]' />
+              <expression op='[Travel Analysis Zones.shp].[TAZ4735]' />
               <expression op='[cs_both_CEM.csv].[taz]' />
             </expression>
           </clause>
           <relation connection='ogrdirect.05bl4ka173i0ic18sqv051fhu4h6' name='Travel Analysis Zones.shp' table='[Travel Analysis Zones.shp]' type='table'>
             <columns>
               <column datatype='integer' name='SUPERD' ordinal='0' />
-              <column datatype='integer' name='TAZ1454' ordinal='1' />
+              <column datatype='integer' name='TAZ4735' ordinal='1' />
               <column datatype='real' name='Shape__Are' ordinal='2' />
               <column datatype='real' name='Shape__Len' ordinal='3' />
               <column datatype='spatial' name='Geometry' ordinal='4' />
@@ -97,11 +97,11 @@
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>TAZ1454</remote-name>
+            <remote-name>TAZ4735</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[TAZ1454]</local-name>
+            <local-name>[TAZ4735]</local-name>
             <parent-name>[Travel Analysis Zones.shp]</parent-name>
-            <remote-alias>TAZ1454</remote-alias>
+            <remote-alias>TAZ4735</remote-alias>
             <ordinal>1</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
@@ -626,7 +626,7 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column caption='Superd' datatype='integer' name='[SUPERD]' role='measure' type='quantitative' />
-      <column caption='Taz1454' datatype='integer' name='[TAZ1454]' role='measure' type='quantitative' />
+      <column caption='Taz4735' datatype='integer' name='[TAZ4735]' role='measure' type='quantitative' />
       <column caption='autoSuff label' datatype='string' name='[autoSuff_label]' role='dimension' type='nominal' />
       <column caption='autoSuff man' datatype='real' name='[autoSuff_man]' role='measure' type='quantitative' />
       <column caption='autoSuff nonman' datatype='real' name='[autoSuff_nonman]' role='measure' type='quantitative' />

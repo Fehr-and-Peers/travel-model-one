@@ -12,7 +12,7 @@ RUN PGM=MATRIX
   ; SMF: Sacramento,    TAZ 1462
   ;
   FILEO MATO[1]  = to_from_airports.tpp, MO=1-5 NAME=SFO,OAK,SJC,STS,SMF
-  ZONES=1475
+  ZONES=4756
 
   MW[1] = 0
   MW[2] = 0

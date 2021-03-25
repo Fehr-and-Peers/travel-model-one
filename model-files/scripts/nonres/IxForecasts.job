@@ -117,7 +117,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,5)'
       token_1473 = 'pow(1.005,5)'
       token_1474 = 'pow(1.005,5)'
-      token_1475 = 'pow(1.005,5)'
+      token_4756 = 'pow(1.005,5)'
 
    elseif (year = 2)
    
@@ -143,7 +143,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,10)'
       token_1473 = 'pow(1.005,10)'
       token_1474 = 'pow(1.005,10)'
-      token_1475 = 'pow(1.005,10)'
+      token_4756 = 'pow(1.005,10)'
       
    elseif (year = 3)
    
@@ -169,7 +169,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,15)'
       token_1473 = 'pow(1.005,15)'
       token_1474 = 'pow(1.005,15)'
-      token_1475 = 'pow(1.005,15)'
+      token_4756 = 'pow(1.005,15)'
       
    elseif (year = 4)
    
@@ -195,7 +195,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,20)'
       token_1473 = 'pow(1.005,20)'
       token_1474 = 'pow(1.005,20)'
-      token_1475 = 'pow(1.005,20)'
+      token_4756 = 'pow(1.005,20)'
       
    elseif (year = 5)
    
@@ -221,7 +221,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,25)'
       token_1473 = 'pow(1.005,25)'
       token_1474 = 'pow(1.005,25)'
-      token_1475 = 'pow(1.005,25)'
+      token_4756 = 'pow(1.005,25)'
       
    elseif (year = 6)
    
@@ -247,7 +247,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,30)'
       token_1473 = 'pow(1.005,30)'
       token_1474 = 'pow(1.005,30)'
-      token_1475 = 'pow(1.005,30)'
+      token_4756 = 'pow(1.005,30)'
       
    elseif (year = 7)
    
@@ -273,7 +273,7 @@ loop year = 1,7
       token_1472 = 'pow(1.005,35)'
       token_1473 = 'pow(1.005,35)'
       token_1474 = 'pow(1.005,35)'
-      token_1475 = 'pow(1.005,35)'
+      token_4756 = 'pow(1.005,35)'
       
    endif
    
@@ -470,11 +470,11 @@ loop year = 1,7
          endif
          
          ;   - CA 1, San Mateo/Santa Cruz
-         if (i == 1475 || j == 1475)
+         if (i == 4756 || j == 4756)
          
-            mw[1] = mi.1.IX_Daily_DA  * @token_1475@
-            mw[2] = mi.1.IX_Daily_SR2 * @token_1475@
-            mw[3] = mi.1.IX_Daily_SR3 * @token_1475@
+            mw[1] = mi.1.IX_Daily_DA  * @token_4756@
+            mw[2] = mi.1.IX_Daily_SR2 * @token_4756@
+            mw[3] = mi.1.IX_Daily_SR3 * @token_4756@
          
          endif
          
