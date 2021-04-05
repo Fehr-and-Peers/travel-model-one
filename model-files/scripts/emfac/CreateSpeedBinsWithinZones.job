@@ -3,7 +3,7 @@
 ;*   2. Extract total daily trips (for calculation of terminal distance VMT & speeds)
 ;*   (Subsequent SAS jobs will aggregate intrazonal and terminal distance VMT to
 ;*      the 13 CARB speed cohorts, for air quality analysis purposes.)
-;*   Generic Forecast Year Run for all 5 timeperiods.        hmb. 
+;*   Generic Forecast Year Run for all 5 tfimeperiods.        hmb. 
 ;*         -- December 28, 2010 ----
 ;*************************************************************************************
 
@@ -76,7 +76,7 @@ run pgm = matrix
    array _timeCountyBin = 51013
    
    ; do these steps for internal zones only
-   if (i <= 1454)
+   if (i <= 4735)
    
       jloop
       
@@ -144,14 +144,14 @@ run pgm = matrix
    	       _countyCode = 8
       	       
    	    ;   - Marin
-   	    elseif (zone >= 1404 && zone <= 1454)
+   	    elseif (zone >= 1404 && zone <= 4735)
    	 
    	       _arbCounty  = 21
    	       _countyName = 'Marin'
    	       _countyCode = 9
    	       
             ;   - External Zones
-   	    elseif (zone > 1454)
+   	    elseif (zone > 4735)
    	 
    	       _arbCounty  = 9999
    	       _countyName = 'External Zones'
@@ -310,9 +310,9 @@ run pgm = matrix
 
       endloop ; time loop
    
-   endif ; i < 1454
+   endif ; i < 4735
    
-   if (i==1454)
+   if (i==4735)
    
     ; set arrays for sum vmt and share of vmt in each hour
       array _vmtArray = 5000

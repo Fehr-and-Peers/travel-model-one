@@ -52,7 +52,7 @@
         token_ivt  = 'ivtLOC'
       endif
 
- DistributeMultistep processid = 'ctramp', processNum = path, commpath = '%COMMPATH%'
+ DistributeMultistep processid = 'ctramp', processNum = path, commpath = ''
 
 ; Loop thru access + egress modes
  loop accegg = 1,3
@@ -179,7 +179,7 @@
           "Aux walk hours","Drive acc & egr hours",
           "AM path count","MD path count"
       endif
-      if(I=1475)
+      if(I=4756)
         IVT_triphours = IVT    / 6000
       	OVT_triphours = OVT    / 6000
       	iwait_hours   = iwait  / 6000
@@ -228,7 +228,7 @@ Wait4Files files=CTRAMP1.script.end, CTRAMP2.script.end, CTRAMP3.script.end,
     if (path = 4) token_path = 'lrf'
     if (path = 5) token_path = 'loc'
 
- DistributeMultistep processid = 'ctramp', processNum = path, commpath = '%COMMPATH%'
+ DistributeMultistep processid = 'ctramp', processNum = path, commpath = ''
 
 ; Loop thru income quartiles
   loop inc = 1,4
@@ -379,15 +379,15 @@ Wait4Files files=CTRAMP1.script.end, CTRAMP2.script.end, CTRAMP3.script.end,
       Time  = triptime /100  ; minutes x 100 to minutes
       Cost  = tripcost /100  ; convert from cents to dollars
 
-      if(I = 1454) Avg_time = Time/Trips
-      if(I = 1454) Avg_Cost = Cost/Trips
+      if(I = 4735) Avg_time = Time/Trips
+      if(I = 4735) Avg_Cost = Cost/Trips
 
      Trips  = TTrips
      Mode   = '@token_path@'
      Income = '@token_inc@'
 
      if(I = 1 & @inc@=1 & @path@ = 1) PRINT PRINTO=1 CSV=T LIST = "Income","Mode","Daily Trips","Avg Time", "Avg Cost"
-     if(I = 1454) PRINT PRINTO=1 CSV=T LIST= Income,Mode,Trips,Avg_time,Avg_Cost
+     if(I = 4735) PRINT PRINTO=1 CSV=T LIST= Income,Mode,Trips,Avg_time,Avg_Cost
     ENDRUN
   endloop ; income
 

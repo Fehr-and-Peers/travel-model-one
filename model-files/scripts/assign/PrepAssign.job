@@ -145,10 +145,10 @@
 * copy main\jointtripdata_%ITER%.csv main\jointtripdata_temp_EV.csv
 
 ; the number of zones is used throughout to size arrays to store data
-token_zones = '1454'
+token_zones = '4735'
 
 ; arrays and sized as zones x zones to store matrix data in a one-dimensional array
-token_zones_by_zones = '2114116'
+token_zones_by_zones = '22420225'
 
 ; set the sample share as a TP+ token
 token_sample_share = '%SAMPLESHARE%'
@@ -197,7 +197,7 @@ loop period = 1, 5
    endif
 
    ; do each time of day as a separate process
-   DistributeMultistep processid = 'ctramp', processNum = @period@, commpath = '%COMMPATH%'
+   DistributeMultistep processid = 'ctramp', processNum = @period@, commpath = ''
 
 
    ; step one: convert individual trip list to an origin/destination list

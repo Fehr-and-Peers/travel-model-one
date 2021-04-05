@@ -28,7 +28,7 @@ ENDRUN
 RUN PGM=MATRIX
   FILEI ZDATI[1] = "skims\unconnected_zones.dbf"
   FILEO MATO[1]  = "skims\connected_zones.tpp", MO=1, NAME=CONNECTED
-  ZONES=1475
+  ZONES=4756
 
   MW[1] = 1
   IF (ZI.1.UNCONNECTED=1) MW[1] = 0
@@ -130,7 +130,7 @@ loop auto = 1,15
    token_vtoll  = 'TOLLVTOLLS3'
   endif
 
-  DistributeMultistep processid = 'ctramp', processNum = auto, commpath = '%COMMPATH%'
+  DistributeMultistep processid = 'ctramp', processNum = auto, commpath = ''
 
     ; Loop thru time periods
     loop inc = 1,4

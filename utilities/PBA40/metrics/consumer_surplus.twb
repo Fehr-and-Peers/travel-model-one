@@ -18,7 +18,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Travel Analysis Zones' name='ogrdirect.1efdtoc1ji58yc1e8ugyi0d6gs5f (copy)'>
-            <connection class='ogrdirect' directory='M:/Data/GIS layers/Travel_Analysis_Zones_(TAZ1454)' filename='Travel Analysis Zones.shp' ogr-grid-shift-folder='C:\Program Files\Tableau\Tableau 2019.2\local\proj4' password='' server='' tablename='' />
+            <connection class='ogrdirect' directory='M:/Data/GIS layers/Travel_Analysis_Zones_(TAZ4735)' filename='Travel Analysis Zones.shp' ogr-grid-shift-folder='C:\Program Files\Tableau\Tableau 2019.2\local\proj4' password='' server='' tablename='' />
           </named-connection>
           <named-connection caption='consumer_surplus' name='textscan.1e7qetk1ws4dz714nplef00kcg77'>
             <connection class='textscan' directory='.' filename='consumer_surplus.csv' password='' server='' />
@@ -55,14 +55,14 @@
           <relation join='right' type='join'>
             <clause type='join'>
               <expression op='='>
-                <expression op='[Travel Analysis Zones.shp].[TAZ1454]' />
+                <expression op='[Travel Analysis Zones.shp].[TAZ4735]' />
                 <expression op='[consumer_surplus.csv].[taz]' />
               </expression>
             </clause>
             <relation connection='ogrdirect.1efdtoc1ji58yc1e8ugyi0d6gs5f (copy)' name='Travel Analysis Zones.shp' table='[Travel Analysis Zones.shp]' type='table'>
               <columns>
                 <column datatype='integer' name='SUPERD' ordinal='0' />
-                <column datatype='integer' name='TAZ1454' ordinal='1' />
+                <column datatype='integer' name='TAZ4735' ordinal='1' />
                 <column datatype='real' name='Shape__Are' ordinal='2' />
                 <column datatype='real' name='Shape__Len' ordinal='3' />
                 <column datatype='spatial' name='Geometry' ordinal='4' />
@@ -119,7 +119,7 @@
           <map key='[SUPERD]' value='[Travel Analysis Zones.shp].[SUPERD]' />
           <map key='[Shape__Are]' value='[Travel Analysis Zones.shp].[Shape__Are]' />
           <map key='[Shape__Len]' value='[Travel Analysis Zones.shp].[Shape__Len]' />
-          <map key='[TAZ1454]' value='[Travel Analysis Zones.shp].[TAZ1454]' />
+          <map key='[TAZ4735]' value='[Travel Analysis Zones.shp].[TAZ4735]' />
           <map key='[autoSuff]' value='[consumer_surplus.csv].[autoSuff]' />
           <map key='[autoSuff_label]' value='[consumer_surplus.csv].[autoSuff_label]' />
           <map key='[autonomousVehicles]' value='[accessibilities_dummy_full_model_households.csv].[autonomousVehicles]' />
@@ -166,11 +166,11 @@
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>TAZ1454</remote-name>
+            <remote-name>TAZ4735</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[TAZ1454]</local-name>
+            <local-name>[TAZ4735]</local-name>
             <parent-name>[Travel Analysis Zones.shp]</parent-name>
-            <remote-alias>TAZ1454</remote-alias>
+            <remote-alias>TAZ4735</remote-alias>
             <ordinal>1</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
@@ -634,7 +634,7 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column caption='Superd' datatype='integer' name='[SUPERD]' role='measure' type='quantitative' />
-      <column aggregation='Sum' caption='Taz1454' datatype='integer' name='[TAZ1454]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Taz4735' datatype='integer' name='[TAZ4735]' role='dimension' type='ordinal' />
       <column aggregation='Sum' caption='Auto Suff' datatype='real' name='[autoSuff]' role='dimension' type='ordinal' />
       <column caption='autoSuff label' datatype='string' name='[autoSuff_label]' role='dimension' type='nominal'>
         <aliases>

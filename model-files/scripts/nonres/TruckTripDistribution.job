@@ -45,13 +45,13 @@
 ; ----------------------------------------------------------------------------------------------------------------
 
 ; set the number of zones token
-token_number_of_internal_zones = 1454
+token_number_of_internal_zones = 4735
 
 ; step one: create the weighted travel time matrix
 run pgm = matrix
 
    ; distribute via cluster
-   DistributeIntrastep processid = 'CTRAMP', processlist = 1-2, commpath = '%COMMPATH%', saveprn = f
+   DistributeIntrastep processid = 'CTRAMP', processlist = 1-2, commpath = '', saveprn = f
 
    ; read in the AM peak period commercial skims
    filei mati[1] = skims\com_hwyskimAM.tpp
@@ -90,7 +90,7 @@ run pgm = tripdist
    filei mati[1] = nonres\blendedTruckTime.tpp
    
    ; read in the k-factors
-   filei mati[2] = nonres\truckkfact.k22.z1454.mat
+   filei mati[2] = nonres\truckkfact.k22.z4735.mat
    
    ; write out the results
    fileo mato[1] = nonres\DailyTruckTrips.tpp, mo = 5-8, name = verySmall, small, medium, large 

@@ -78,7 +78,7 @@ token_bike_speed = 12.00
 token_max_bike_distance = 75.0
 
 ; only print the data for internal to internal flows
-token_internal_zones = 1454
+token_internal_zones = 4735
 
 ; dump time-period-specific databases
 loop period = 1, 5
@@ -111,7 +111,7 @@ loop period = 1, 5
    endif
    
    ; do each time of day as a separate process
-   DistributeMultistep processid = 'ctramp', processNum = period, commpath = '%COMMPATH%'
+   DistributeMultistep processid = 'ctramp', processNum = period, commpath = ''
      
    ; total travel time by mode
    run pgm = matrix
